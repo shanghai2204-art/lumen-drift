@@ -1,0 +1,24 @@
+/* Lumen Drift — the page around the canvas: a deep-space backdrop and the
+   stage centered, scaled to fit while keeping the 1280x800 ratio. */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #04060d;
+  min-height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(900px 560px at 50% 38%, #0a1226 0%, #04060d 70%);
+}
+canvas#game {
+  width: min(100vw, 160vh);
+  height: auto;
+  aspect-ratio: 1280 / 800;
+  display: block;
+  box-shadow: 0 0 60px rgba(64, 120, 255, 0.25);
+  cursor: crosshair;
+  touch-action: none;
+}
